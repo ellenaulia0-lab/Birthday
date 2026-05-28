@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiest Birthday Baby!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            font-family: sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px; /* Batas maksimal lebar layar agar proporsional */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Gambar tidak akan terpotong atau gepeng */
+            display: block;
+        }
+        #page1 {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+        #page2 {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background-color: #0056b3; /* Menyamakan warna background asli gambar 2 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="page1" onclick="bukaSurat()">
+            <img src="halaman1.png" alt="Klik untuk membuka surat">
+        </div>
+
+        <div id="page2">
+            <img src="halaman2.png" alt="Selamat Ulang Tahun">
+        </div>
+    </div>
+
+    <script>
+        function bukaSurat() {
+            // Sembunyikan halaman 1
+            document.getElementById('page1').style.display = 'none';
+            // Ubah background body jadi biru biar senada dengan gambar 2
+            document.body.style.backgroundColor = "#0056b3";
+            // Tampilkan halaman 2
+            document.getElementById('page2').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
